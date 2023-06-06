@@ -1,1 +1,131 @@
 /* write your override styles here */
+/* css/paint.css */
+
+/* Style for the graffiti wall */
+#wall {
+    position: relative;
+    margin: 40px auto;
+    width: 800px;
+    height: 400px;
+    background: #f1f1f1;
+    border: 10px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* Style for individual graffiti tags */
+  #wall > div {
+    position: absolute;
+    background: #ffa500;
+    border-radius: 10px;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  /* Custom styles for each graffiti tag */
+  .tag-1 {
+    top: 50px;
+    left: 50px;
+    width: 150px;
+    height: 100px;
+    animation-name: slide;
+  }
+  
+  #tag-2 {
+    top: 150px;
+    left: 250px;
+    width: 100px;
+    height: 200px;
+    background: #00ff00;
+    animation-name: rotate;
+  }
+  
+  #tag-3 {
+    top: 100px;
+    left: 500px;
+    width: 200px;
+    height: 150px;
+    background: #ff00ff;
+    animation-name: scale;
+  }
+  
+  .parent {
+    position: relative;
+  }
+  
+  #tag-4 {
+    top: 200px;
+    left: 150px;
+    width: 100px;
+    height: 100px;
+    background: #0000ff;
+    animation-name: bounce;
+  }
+  
+  #tag-5 {
+    top: 250px;
+    left: 350px;
+    width: 150px;
+    height: 100px;
+    background: #ffff00;
+    animation-name: fade;
+  }
+  
+  #tag-6 {
+    top: 150px;
+    left: 650px;
+    width: 100px;
+    height: 200px;
+    background: #ff0000;
+    animation-name: pulse;
+  }
+  
+  #tag-7 {
+    top: 250px;
+    left: 550px;
+    width: 200px;
+    height: 100px;
+    background: #00ffff;
+    animation-name: spin;
+  }
+  
+  @keyframes slide {
+    0% { left: 0; }
+    50% { left: 600px; }
+    100% { left: 0; }
+  }
+  
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes scale {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes bounce {
+    0%, 100% { top: 200px; }
+    50% { top: 100px; }
+  }
+  
+  @keyframes fade {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
